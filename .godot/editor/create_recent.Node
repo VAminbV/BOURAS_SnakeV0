@@ -1,0 +1,10 @@
+AudioStreamPlayer
+AudioListener2D
+Label
+TextEdit
+Button
+Panel
+CanvasLayer
+Sprite2D
+Timer
+Node

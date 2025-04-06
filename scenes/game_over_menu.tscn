@@ -1,0 +1,67 @@
+[gd_scene load_steps=7 format=3 uid="uid://bct2iq6e5mtt2"]
+
+[ext_resource type="FontFile" uid="uid://bj1v3fbmg2yjf" path="res://assets/MaldiniBold.ttf" id="1_6ebp1"]
+[ext_resource type="Script" uid="uid://22hyf5xtoj2q" path="res://scenes/game_over_menu.gd" id="1_cwb3k"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cwb3k"]
+bg_color = Color(0.14902, 0.729412, 0.878431, 1)
+shadow_size = 5
+shadow_offset = Vector2(10, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ccgoi"]
+bg_color = Color(0.694118, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_81acl"]
+bg_color = Color(1, 0, 0.117647, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7u104"]
+bg_color = Color(0.927036, 0.442145, 3.85046e-07, 1)
+
+[node name="GameOverMenu" type="CanvasLayer"]
+script = ExtResource("1_cwb3k")
+
+[node name="GameOverPanel" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -125.0
+offset_right = 200.0
+offset_bottom = 125.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_cwb3k")
+
+[node name="ResultLabel" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -124.0
+offset_top = -94.0
+offset_right = 143.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_6ebp1")
+theme_override_font_sizes/font_size = 50
+text = "DÉFAITE ! "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RestartButton" type="Button" parent="."]
+offset_left = 378.0
+offset_top = 523.0
+offset_right = 628.0
+offset_bottom = 586.0
+theme_override_fonts/font = ExtResource("1_6ebp1")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = SubResource("StyleBoxFlat_ccgoi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_81acl")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7u104")
+text = "Play Again"
+
+[connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]

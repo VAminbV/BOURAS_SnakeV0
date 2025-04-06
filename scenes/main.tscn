@@ -1,0 +1,36 @@
+[gd_scene load_steps=8 format=3 uid="uid://day3j564wy6bl"]
+
+[ext_resource type="Script" uid="uid://3emkg1guvvt0" path="res://scenes/main.gd" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://bwxfc0pmbph1k" path="res://scenes/snake_segment.tscn" id="2_jyhfs"]
+[ext_resource type="Texture2D" uid="uid://pg4360woshaj" path="res://assets/bg.png" id="2_sugp2"]
+[ext_resource type="PackedScene" uid="uid://8clygqoht7ef" path="res://scenes/hud.tscn" id="3_jyhfs"]
+[ext_resource type="Texture2D" uid="uid://dn34yfb5cifst" path="res://assets/apple.png" id="5_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://bct2iq6e5mtt2" path="res://scenes/game_over_menu.tscn" id="6_tefeu"]
+[ext_resource type="AudioStream" uid="uid://m4ajh60xyao3" path="res://assets/retro-game-arcade-236133.mp3" id="7_o6xl0"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_o5qli")
+snake_scene = ExtResource("2_jyhfs")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(500, 550)
+texture = ExtResource("2_sugp2")
+
+[node name="Hud" parent="." instance=ExtResource("3_jyhfs")]
+
+[node name="MoveTimer" type="Timer" parent="."]
+wait_time = 0.085
+
+[node name="Food" type="Sprite2D" parent="."]
+texture = ExtResource("5_tbgi4")
+offset = Vector2(25, 25)
+
+[node name="GameOverMenu" parent="." instance=ExtResource("6_tefeu")]
+process_mode = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_o6xl0")
+autoplay = true
+
+[connection signal="timeout" from="MoveTimer" to="." method="_on_move_timer_timeout"]
+[connection signal="restart" from="GameOverMenu" to="." method="_on_game_over_menu_restart"]

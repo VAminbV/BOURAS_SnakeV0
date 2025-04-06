@@ -1,0 +1,16 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1743950211
+export_presets.cfg::TextFile/TextFile::-1::1743948600::0::1::::<><><>0<>0<><>::
+icon.svg::CompressedTexture2D/CompressedTexture2D::1563207617344863325::1743534634::1743534640::1::::<><><>0<>0<>d01d2dcce7d540ebbf36bdd1dcd4e67c<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+::res://assets/::1743950216
+apple.png::CompressedTexture2D/CompressedTexture2D::8131323512858954219::1743535036::1743535448::1::::<><><>0<>0<>996bab695db7cee3c8cf2ffa77cef2c9<>res://.godot/imported/apple.png-d0c5a0e024efc439723035186c67a74a.ctex::
+bg.png::CompressedTexture2D/CompressedTexture2D::1067031383977377429::1743535036::1743535448::1::::<><><>0<>0<>8f6fbef9297f3343d56f801084b80468<>res://.godot/imported/bg.png-23a59c2e9cba2223a50fa3fe41b70b25.ctex::
+MaldiniBold.ttf::FontFile/FontFile::3073119421834267023::1743535850::1743535852::1::::<><><>0<>0<>edd13a8b9c16df8338fe018e1ae531d6<>res://.godot/imported/MaldiniBold.ttf-cce0e3cae12b8508d03cb12dba036872.fontdata::
+retro-game-arcade-236133.mp3::AudioStreamMP3::902149567389219208::1743950158::1743950217::1::::<><><>0<>0<>c60d20a0325a4095d80cd746efd10419<>res://.godot/imported/retro-game-arcade-236133.mp3-445fc81683cec240855c804d13cc4a83.mp3str::
+::res://scenes/::1743949967
+game_over_menu.gd::GDScript/GDScript::1951305165621421002::1743926970::0::1::::<>CanvasLayer<><>0<>0<><>::
+game_over_menu.tscn::PackedScene::2567676081937100525::1743949677::0::1::::<><><>0<>0<><>::uid://bj1v3fbmg2yjf::::res://assets/MaldiniBold.ttf<>uid://22hyf5xtoj2q::::res://scenes/game_over_menu.gd
+hud.tscn::PackedScene::2321071682040542549::1743949677::0::1::::<><><>0<>0<><>::uid://bj1v3fbmg2yjf::::res://assets/MaldiniBold.ttf
+main.gd::GDScript::1974291950338597659::1743948702::0::1::::<>Node<><>0<>0<><>::
+main.tscn::PackedScene::7210524890056789929::1743949677::0::1::::<><><>0<>0<><>::uid://3emkg1guvvt0::::res://scenes/main.gd<>uid://bwxfc0pmbph1k::::res://scenes/snake_segment.tscn<>uid://pg4360woshaj::::res://assets/bg.png<>uid://8clygqoht7ef::::res://scenes/hud.tscn<>uid://dn34yfb5cifst::::res://assets/apple.png<>uid://bct2iq6e5mtt2::::res://scenes/game_over_menu.tscn<>uid://c4cpp5fg26iv1::::res://assets/WAIT WAIT WAIT WAT THE HELLLLLL  FULL.mp3
+snake_segment.tscn::PackedScene::3978364425427810274::1743949677::0::1::::<><><>0<>0<><>::
